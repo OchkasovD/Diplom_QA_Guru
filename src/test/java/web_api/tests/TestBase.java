@@ -31,25 +31,16 @@ public class TestBase {
     static void beforeUrl() {
         RestAssured.baseURI = System.getProperty("baseURL", "https://shop1.emagazin.info");
         Configuration.baseUrl = System.getProperty("baseURL", "https://shop1.emagazin.info");
-        String[] browserAndVersion = System.getProperty("browser", "chrome:100.0").split(":");
-        Configuration.browser = browserAndVersion[0];
-        Configuration.browserVersion = browserAndVersion[1];
+        Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-        Configuration.pageLoadStrategy = "eager";
-
-        Configuration.remote = String.format("https://%s:%s@%s",
-                System.getProperty("selenoidLogin", "user1"),
-                System.getProperty("selenoidPassword", "1234"),
-                System.getProperty("selenoidUrl", "https://selenoid.autotests.cloud/wd/hub").replace("https://", "")
-        );
+        Configuration.browserVersion = System.getProperty("browserVersion", "100");
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-
-        Configuration.browserCapabilities = capabilities;
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.remote = format("https://%s:%s@%s",
+                config.login(), config.password(), config.remoteUrl());
     }
 
 
