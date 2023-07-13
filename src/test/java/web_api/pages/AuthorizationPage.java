@@ -9,6 +9,6 @@ public class AuthorizationPage {
     public void checkAuthorizationUser() {
         open("/index.php?controller=my-account");
         $(".link-item").shouldHave(text("Информация")).click();
-        $("[name=firstname]").shouldHave(value("Иван"));
+        $("[name=firstname]").shouldHave(value("Dmytry"));
     }
 }
