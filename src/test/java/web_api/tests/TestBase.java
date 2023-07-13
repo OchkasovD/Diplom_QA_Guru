@@ -29,7 +29,7 @@ public class TestBase {
     static void beforeUrl() {
         RestAssured.baseURI = System.getProperty("baseURL", "https://shop1.emagazin.info");
         Configuration.baseUrl = System.getProperty("baseURL", "https://shop1.emagazin.info");
-        Configuration.browser = System.getProperty("browser", "firefox");
+        Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browserVersion = System.getProperty("browserVersion", "100");
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
