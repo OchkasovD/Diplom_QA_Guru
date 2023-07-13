@@ -5,33 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/config/CredentialsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/helpers/Attach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/helpers/CustomApiListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/helpers/DriverUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/models/RequestModels.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/pages/AuthorizationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/pages/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/pages/ProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/specs/Specifications.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/TestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config/example_credential.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config/tpl/request.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config/tpl/response.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/allure-notifications-4.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +62,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/d.ochkasov/PageObjects_qa_guru_19_homework7",
+    "last_opened_file_path": "C:/Users/d.ochkasov/ideaProjects/Diplom_QA_Guru_Ochkasov_D",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.53908044"
@@ -91,6 +70,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru_Ochkasov_D" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru_Ochkasov_D\src\test\resources\config" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru_Ochkasov_D\src\test\java" />
     </key>
@@ -223,10 +203,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ShopEmagazinTests.checkAddBasketTest" />
+        <item itemvalue="Gradle.ShopEmagazinTests.checkTitleTest" />
         <item itemvalue="Gradle.ShopEmagazinTests.checkRelatedProductsElementsTest" />
         <item itemvalue="Gradle.ShopEmagazinTests.checkMenuElementsTest" />
         <item itemvalue="Gradle.ShopEmagazinTests.checkCardProductTest" />
-        <item itemvalue="Gradle.ShopEmagazinTests.checkTitleTest" />
       </list>
     </recent_temporary>
   </component>
