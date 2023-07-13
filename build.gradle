@@ -8,15 +8,15 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.23.0",
+def allureVersion = "2.18.1",
     selenideVersion = "6.5.0",
-    junitVersion = "5.9.2",
+    junitVersion = "5.8.2",
     aspectjweaverVersion = "1.9.6",
     javafakerVersion = "1.0.2",
-    restAssuredVersion = "5.3.0",
+    restAssuredVersion = "4.3.1",
     ownerVersion = "1.0.12",
-    assertjCoreVersion = "3.24.0",
-    slf4jSimpleVersion = "2.0.7"
+    assertjCoreVersion = "3.19.0",
+    slf4jSimpleVersion = "1.7.29"
 
 allure {
     report {
@@ -49,35 +49,15 @@ dependencies {
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
-task regress_test(type: Test) {
-    useJUnitPlatform {
-        includeTags( "Regress")
-    }
-}
 
-task web_test(type: Test) {
-    useJUnitPlatform {
-        includeTags( "WEB")
-    }
-}
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
 
-task api_test(type: Test) {
-    useJUnitPlatform {
-        includeTags( "API")
-    }
-}
-
-    tasks.withType(Test) {
-        systemProperties(System.getProperties())
-        useJUnitPlatform()
-
-        testLogging {
-            lifecycle {
-                events "started", "skipped", "failed", "standard_error", "standard_out"
-                exceptionFormat "short"
-            }
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
         }
-
-
+    }
 }
-
