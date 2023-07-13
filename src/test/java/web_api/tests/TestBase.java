@@ -10,6 +10,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import web_api.config.CredentialsConfig;
 import web_api.helpers.Attach;
+import web_api.pages.AuthorizationPage;
+import web_api.pages.MainPage;
 import web_api.pages.ProductPage;
 
 import static java.lang.String.format;
@@ -18,9 +20,9 @@ import static java.lang.String.format;
 public class TestBase {
 
     static TestData testData = new TestData();
-
+    MainPage mainPage = new MainPage();
     ProductPage productPage = new ProductPage();
-
+    AuthorizationPage authorizationPage = new AuthorizationPage();
     static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
 
     @BeforeAll
