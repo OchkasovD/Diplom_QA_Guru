@@ -14,12 +14,12 @@ import static web_api.specs.Specifications.*;
 
 public class ShopEmagazinApiTests extends TestBase{
     @Test
-    @DisplayName("Проверка авторизации пользователя")
+    @DisplayName("check user authorization")
     void authorizationUserTest() {
-        step("Открытие минимального контента", () ->
+        step("open minimal content", () ->
                 mainPage.openMinContent());
 
-        step("Авторизация через API", () -> {
+        step("API authorization", () -> {
             RequestModels formParam = new RequestModels();
             formParam.setBack(testData.back);
             formParam.setEmail(testData.email);
@@ -40,25 +40,25 @@ public class ShopEmagazinApiTests extends TestBase{
                     .cookie(testData.authCookieName);
         });
 
-        step("set cookie в браузере", () -> {
+        step("browser set cookie", () -> {
             open(baseUrl);
             Selenide.clearBrowserCookies();
             Cookie authCookie = new Cookie(testData.authCookieName, testData.authCookieValue);
             WebDriverRunner.getWebDriver().manage().addCookie(authCookie);
         });
 
-        step("Проверка авторизации через UI", () -> {
+        step("check UI authorization", () -> {
             authorizationPage.checkAuthorizationUser();
         });
     }
 
     @Test
-    @DisplayName("Проверка удачной регистрации пользователя")
+    @DisplayName("check successful user authorization")
     void successRegistrationUserTest() {
-        step("Открытие минимального контента", () ->
+        step("open minimal content", () ->
                 mainPage.openMinContent());
 
-        step("Регистрация через API", () -> {
+        step("API registration", () -> {
             RequestModels formParam = new RequestModels();
             formParam.setIdGender(testData.genderId);
             formParam.setFirstName(testData.firstName);
@@ -87,12 +87,12 @@ public class ShopEmagazinApiTests extends TestBase{
     }
 
     @Test
-    @DisplayName("Проверка не удачной регистрации пользователя ")
+    @DisplayName("check unsuccessful user authorization")
     void failRegistrationUserTest() {
-        step("Открытие минимального контента", () ->
+        step("open minimal content", () ->
                 mainPage.openMinContent());
 
-        step("Регистрация через API", () -> {
+        step("API registration", () -> {
             RequestModels formParam = new RequestModels();
             formParam.setFirstName(testData.firstName);
             formParam.setLastName(testData.lastName);

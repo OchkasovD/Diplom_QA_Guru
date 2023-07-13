@@ -11,12 +11,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ShopEmagazinWebTests extends TestBase {
 
     @Test
-    @DisplayName("Проверка title главной страницы 'shop1.emagazin.info'")
+    @DisplayName("Check main page title 'shop1.emagazin.info'")
     void checkTitleTest() {
-        step("Открываем главную страницу сайта", ()
+        step("Open the main page", ()
                 -> open(baseUrl));
 
-        step("Проверяем, что title название страницы содержит текст 'Демо-магазин'", () -> {
+        step("Check, title name page contains 'Демо-магазин'", () -> {
             String expectedTitle = "Демо-магазин";
             String actualTitle = title();
             assertThat(actualTitle).isEqualTo(expectedTitle);
@@ -25,51 +25,51 @@ public class ShopEmagazinWebTests extends TestBase {
 
 
     @Test
-    @DisplayName("Проверка перехода по элементам  в навигационной панели")
+    @DisplayName("Check navigation panel elements transition")
     void checkMenuElementsTest() {
-        step("Открываем главную страницу сайта", ()
+        step("Open the main page", ()
                 -> open(baseUrl));
 
-        step("Проверяем, переход по элементу 'Одежда'", () -> {
+        step("Check, transition element 'Одежда'", () -> {
             mainPage.navigationMenu(testData.menuClothes);
         });
 
-        step("Проверяем, переход по элементу 'Сопутствующие товары'", () -> {
+        step("Check, transition element 'Сопутствующие товары'", () -> {
             mainPage.navigationMenu(testData.menuRelatedProd);
         });
 
-        step("Проверяем, переход по элементу 'Картины'", () -> {
+        step("Check, transition element 'Картины'", () -> {
             mainPage.navigationMenu(testData.menuPaintings);
         });
     }
 
     @Test
-    @DisplayName("Проверка количества товаров")
+    @DisplayName("Check number of goods")
     void checkRelatedProductsElementsTest() {
-        step("Открываем главную страницу сайта", ()
+        step("Open the main page", ()
                 -> open(baseUrl));
 
-        step("Переход по элементу 'Сопутствующие товары'", () -> {
+        step("transition element 'Сопутствующие товары'", () -> {
             mainPage.navigationMenu(testData.menuRelatedProd);
         });
 
-        step("Проверка кол-во элементов в каталоге 'Сопутствующие товары'", () -> {
+        step("Check number of goods in 'Сопутствующие товары'", () -> {
             productPage.catalogSize(testData.countElements);
             assertThat(testData.countElements).isEqualTo(testData.RELATEDELEMENTS);
         });
     }
 
     @Test
-    @DisplayName("Проверка открытия карточка товара")
+    @DisplayName("Check open card product")
     void checkCardProductTest() {
-        step("Открываем главную страницу сайта", ()
+        step("Open the main page", ()
                 -> open(baseUrl));
 
-        step("Переход по элементу 'Сопутствующие товары'", () -> {
+        step("transition element 'Сопутствующие товары'", () -> {
             mainPage.navigationMenu(testData.menuRelatedProd);
         });
 
-        step("Проверка открытия карточка товара 'Сопутствующие товары'", () -> {
+        step("Check open card product 'Сопутствующие товары'", () -> {
             productPage.openDetailCard(testData.nameTitleCard);
             String expectedTitle = testData.nameTitleCard;
             String actualTitle = title();
@@ -78,20 +78,20 @@ public class ShopEmagazinWebTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка добавление товара в корзину")
+    @DisplayName("Check add item to cart")
     void checkAddBasketTest() {
-        step("Открываем главную страницу сайта", ()
+        step("Open the main page", ()
                 -> open(baseUrl));
 
-        step("Переход по элементу 'Сопутствующие товары'", () -> {
+        step("transition element 'Сопутствующие товары'", () -> {
             mainPage.navigationMenu(testData.menuRelatedProd);
         });
 
-        step("Открытия карточки товара 'Сопутствующие товары'", () -> {
+        step("open card product 'Сопутствующие товары'", () -> {
             productPage.openDetailCard(testData.nameTitleCard);
         });
 
-        step("Добавление товара в корзину", () -> {
+        step("add item to cart", () -> {
             productPage.addToCardProduct();
         });
     }
