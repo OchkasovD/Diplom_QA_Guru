@@ -3,6 +3,8 @@ package web_api.tests;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
 import web_api.models.RequestModels;
@@ -14,6 +16,7 @@ import static web_api.specs.Specifications.*;
 
 public class ShopEmagazinApiTests extends TestBase{
     @Test
+    @Tags({ @Tag("API"), @Tag("Regress")})
     @DisplayName("Check user authorization")
     void authorizationUserTest() {
         step("open minimal content", () ->
@@ -53,6 +56,7 @@ public class ShopEmagazinApiTests extends TestBase{
     }
 
     @Test
+    @Tags({ @Tag("API"), @Tag("Regress")})
     @DisplayName("Check successful user authorization")
     void successRegistrationUserTest() {
         step("open minimal content", () ->
@@ -87,6 +91,7 @@ public class ShopEmagazinApiTests extends TestBase{
     }
 
     @Test
+    @Tags({ @Tag("API"), @Tag("Regress")})
     @DisplayName("Check unsuccessful user authorization")
     void failRegistrationUserTest() {
         step("open minimal content", () ->

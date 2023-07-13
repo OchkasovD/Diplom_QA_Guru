@@ -29,7 +29,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeUrl() {
-        RestAssured.baseURI = System.getProperty("baseURL", "https://shop1.emagazin.info");
+        RestAssured.baseURI = System.getProperty("baseURI", "https://shop1.emagazin.info");
         Configuration.baseUrl = System.getProperty("baseURL", "https://shop1.emagazin.info");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
