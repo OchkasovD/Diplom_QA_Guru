@@ -8,7 +8,7 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class ShopEmagazinTests extends TestBase {
+public class ShopEmagazinWebTests extends TestBase {
 
     @Test
     @DisplayName("Проверка title главной страницы 'shop1.emagazin.info'")

@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/pages/AuthorizationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/pages/AuthorizationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinWebTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689256704356</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add telegram notifications">
+      <created>1689257812741</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689257812741</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
