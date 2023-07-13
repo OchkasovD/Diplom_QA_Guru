@@ -1,74 +1,63 @@
 plugins {
     id 'java-library'
-    id "io.qameta.allure" version "2.11.2"
-    id "io.freefair.lombok" version "6.0.0-m2"
-}
-group 'org.example'
-version '1.0-SNAPSHOT'
-
-ext {
-    allureVersion = '2.22.0'
-    junitVersion = '5.9.2'
-    selenideVersion = '5.21.0'
-    aspectjVersion = "1.9.6"
-    restAssuredVersion = "4.3.3"
-    ownerVersion = "1.0.12"
-    fakerVersion="1.0.2"
-}
-
-    allure {
-        report {
-            version.set("2.20.1")
-        }
-        adapter {
-            aspectjWeaver.set(true)
-            frameworks {
-                junit5 {
-                    adapterVersion.set("2.20.1")
-            }
-        }
-    }
-
-    //для запуска тестов через Gradle -> Tasks -> verification --> test
-    useJUnit5 {
-        version = "${allureVersion}"
-    }
+    id 'io.qameta.allure' version '2.10.0'
+    id 'io.freefair.lombok' version '6.0.0-m2'
 }
 
 repositories {
     mavenCentral()
 }
 
+def allureVersion = "2.18.1",
+    selenideVersion = "6.5.0",
+    junitVersion = "5.8.2",
+    aspectjweaverVersion = "1.9.6",
+    javafakerVersion = "1.0.2",
+    restAssuredVersion = "4.3.1",
+    ownerVersion = "1.0.12",
+    assertjCoreVersion = "3.19.0",
+    slf4jSimpleVersion = "1.7.29"
+
+allure {
+    report {
+        version.set(allureVersion)
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set(allureVersion)
+            }
+        }
+    }
+}
+
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:5.21.0",
-            "org.junit.jupiter:junit-jupiter:5.9.1",
-            "org.slf4j:slf4j-simple:2.0.6",
-            'org.assertj:assertj-core:3.24.2',
-            "io.rest-assured:rest-assured:5.3.0",
-            'io.qameta.allure:allure-selenide:2.20.1',
-            "io.qameta.allure:allure-rest-assured:2.19.0",
-            "com.fasterxml.jackson.core:jackson-databind:2.14.2",
-            'org.aeonbits.owner:owner:1.0.12',
-            'io.github.bonigarcia:webdrivermanager:5.3.0',
-            'com.github.javafaker:javafaker:1.0.2'
-    )
-
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+            "org.aspectj:aspectjweaver:$aspectjweaverVersion",
+            "com.github.javafaker:javafaker:$javafakerVersion",
+            "com.codeborne:selenide:$selenideVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "org.assertj:assertj-core:$assertjCoreVersion",
+            "org.slf4j:slf4j-simple:$slf4jSimpleVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion")
 }
 
-test {
-    useJUnitPlatform()
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
+
 tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
     testLogging {
         lifecycle {
-            events "started", "passed", "skipped", "failed", "standard_error", "standard_out"
+            events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
     }
 }
-
