@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notifications/allure-notifications-4.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notifications/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,6 +215,18 @@
       <option name="presentableId" value="Default" />
       <updated>1688569192023</updated>
     </task>
+    <task id="LOCAL-00001" summary="add telegram notifications">
+      <created>1689250267503</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689250267503</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add telegram notifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="add telegram notifications" />
   </component>
 </project>

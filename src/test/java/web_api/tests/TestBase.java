@@ -4,13 +4,15 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.RestAssured;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import web_api.config.CredentialsConfig;
 import web_api.helpers.Attach;
 import web_api.pages.ProductPage;
 
-
+import static java.lang.String.format;
 
 
 public class TestBase {
@@ -19,11 +21,11 @@ public class TestBase {
 
     ProductPage productPage = new ProductPage();
 
-
+    static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
 
     @BeforeAll
     static void beforeUrl() {
-        RestAssured.baseURI = System.getProperty("baseURI", "https://shop1.emagazin.info");
+        RestAssured.baseURI = System.getProperty("baseURL", "https://shop1.emagazin.info");
         Configuration.baseUrl = System.getProperty("baseURL", "https://shop1.emagazin.info");
         Configuration.browser = System.getProperty("browser", "firefox");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
@@ -33,7 +35,8 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = format("https://%s:%s@%s", config.login(), config.password(), config.remoteUrl());
+
 
 
     }
