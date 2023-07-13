@@ -34,6 +34,7 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browserVersion = System.getProperty("browserVersion", "100");
+        Configuration.pageLoadStrategy = "eager";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -41,6 +42,7 @@ public class TestBase {
                 "enableVNC", true,
                 "enableVideo", true
         ));
+        Configuration.browserCapabilities = capabilities;
         Configuration.remote = format("https://%s:%s@%s",
                 config.login(), config.password(), config.remoteUrl());
     }
