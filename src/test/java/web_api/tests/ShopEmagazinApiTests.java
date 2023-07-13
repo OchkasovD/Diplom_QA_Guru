@@ -14,7 +14,7 @@ import static web_api.specs.Specifications.*;
 
 public class ShopEmagazinApiTests extends TestBase{
     @Test
-    @DisplayName("check user authorization")
+    @DisplayName("Check user authorization")
     void authorizationUserTest() {
         step("open minimal content", () ->
                 mainPage.openMinContent());
@@ -40,20 +40,20 @@ public class ShopEmagazinApiTests extends TestBase{
                     .cookie(testData.authCookieName);
         });
 
-        step("browser set cookie", () -> {
+        step("Browser set cookie", () -> {
             open(baseUrl);
             Selenide.clearBrowserCookies();
             Cookie authCookie = new Cookie(testData.authCookieName, testData.authCookieValue);
             WebDriverRunner.getWebDriver().manage().addCookie(authCookie);
         });
 
-        step("check UI authorization", () -> {
+        step("Check UI authorization", () -> {
             authorizationPage.checkAuthorizationUser();
         });
     }
 
     @Test
-    @DisplayName("check successful user authorization")
+    @DisplayName("Check successful user authorization")
     void successRegistrationUserTest() {
         step("open minimal content", () ->
                 mainPage.openMinContent());
@@ -87,7 +87,7 @@ public class ShopEmagazinApiTests extends TestBase{
     }
 
     @Test
-    @DisplayName("check unsuccessful user authorization")
+    @DisplayName("Check unsuccessful user authorization")
     void failRegistrationUserTest() {
         step("open minimal content", () ->
                 mainPage.openMinContent());

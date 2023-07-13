@@ -49,7 +49,7 @@ public class ShopEmagazinWebTests extends TestBase {
         step("Open the main page", ()
                 -> open(baseUrl));
 
-        step("transition element 'Сопутствующие товары'", () -> {
+        step("Transition element 'Сопутствующие товары'", () -> {
             mainPage.navigationMenu(testData.menuRelatedProd);
         });
 
@@ -65,7 +65,7 @@ public class ShopEmagazinWebTests extends TestBase {
         step("Open the main page", ()
                 -> open(baseUrl));
 
-        step("transition element 'Сопутствующие товары'", () -> {
+        step("Transition element 'Сопутствующие товары'", () -> {
             mainPage.navigationMenu(testData.menuRelatedProd);
         });
 
@@ -87,11 +87,11 @@ public class ShopEmagazinWebTests extends TestBase {
             mainPage.navigationMenu(testData.menuRelatedProd);
         });
 
-        step("open card product 'Сопутствующие товары'", () -> {
+        step("Open card product 'Сопутствующие товары'", () -> {
             productPage.openDetailCard(testData.nameTitleCard);
         });
 
-        step("add item to cart", () -> {
+        step("Add item to cart", () -> {
             productPage.addToCardProduct();
         });
     }
