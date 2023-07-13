@@ -8,12 +8,12 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.18.1",
-    selenideVersion = "6.5.0",
+def allureVersion = "2.23.0",
+    selenideVersion = "6.15.0",
     junitVersion = "5.8.2",
     aspectjweaverVersion = "1.9.6",
     javafakerVersion = "1.0.2",
-    restAssuredVersion = "4.3.1",
+    restAssuredVersion = "5.3.0",
     ownerVersion = "1.0.12",
     assertjCoreVersion = "3.19.0",
     slf4jSimpleVersion = "1.7.29"
