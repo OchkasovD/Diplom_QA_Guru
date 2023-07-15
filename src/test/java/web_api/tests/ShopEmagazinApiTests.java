@@ -8,13 +8,47 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
 import web_api.models.RequestModels;
+
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
 import static web_api.specs.Specifications.*;
 
-public class ShopEmagazinApiTests extends TestBase{
+public class ShopEmagazinApiTests extends TestBaseLocal{
+
+
+    @Test
+    void loginWithApiTest() {
+        step("Get authorization cookie by api and set it to browser", () -> {
+            String authCookieKey = "PrestaShop-5eb24e794c8e2bb6adc3500d9af027ad";
+            String authCookieValue = given()
+                    .contentType("text/html; charset=utf-8")
+                    .formParam("Email", login)
+                    .formParam("Password", password)
+                    .when()
+                    .post("/index.php?controller=authentication&back=my-account")
+                    .then()
+                    .log().all()
+                    .statusCode(200)
+                    .extract()
+                    .cookie(authCookieKey);
+
+            open("/img/demo-magazin-logo-1590349645.jpg");
+            Cookie authCookie = new Cookie(authCookieKey, authCookieValue);
+            getWebDriver().manage().addCookie(authCookie);
+        });
+
+
+    }
+
+
+
     @Test
     @Tags({ @Tag("API"), @Tag("Regress")})
     @DisplayName("Check user authorization")
