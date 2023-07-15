@@ -26,7 +26,8 @@ public class TestBase {
     ProductPage productPage = new ProductPage();
     AuthorizationPage authorizationPage = new AuthorizationPage();
     static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
-
+    String login = "locat@testmail.ru",
+            password = "99990000";
     @BeforeAll
     static void beforeUrl() {
         RestAssured.baseURI = System.getProperty("baseURI", "https://shop1.emagazin.info");

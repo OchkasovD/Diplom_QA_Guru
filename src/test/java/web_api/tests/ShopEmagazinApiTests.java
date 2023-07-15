@@ -20,7 +20,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static web_api.specs.Specifications.*;
 
-public class ShopEmagazinApiTests extends TestBaseLocal{
+public class ShopEmagazinApiTests extends TestBase{
 
 
     @Test
