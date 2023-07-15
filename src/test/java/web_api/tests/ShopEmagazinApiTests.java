@@ -35,7 +35,7 @@ public class ShopEmagazinApiTests extends TestBaseLocal{
                     .post("/index.php?controller=authentication&back=my-account")
                     .then()
                     .log().all()
-                    .statusCode(200)
+                    .statusCode(302)
                     .extract()
                     .cookie(authCookieKey);
 
