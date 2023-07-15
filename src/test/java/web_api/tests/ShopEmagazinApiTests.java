@@ -1,6 +1,4 @@
 package web_api.tests;
-
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -8,79 +6,46 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
 import web_api.models.RequestModels;
+import web_api.pages.AuthorizationPage;
+import web_api.pages.MainPage;
+import web_api.pages.ProductPage;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.value;
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
 import static web_api.specs.Specifications.*;
 
-public class ShopEmagazinApiTests extends TestBase{
 
-
-    @Test
-    void loginWithApiTest() {
-        step("Get authorization cookie by api and set it to browser", () -> {
-            String authCookieKey = "PrestaShop-5eb24e794c8e2bb6adc3500d9af027ad";
-            String authCookieValue = given()
-                    .contentType("text/html; charset=utf-8")
-                    .formParam("Email", login)
-                    .formParam("Password", password)
-                    .when()
-                    .post("/index.php?controller=authentication&back=my-account")
-                    .then()
-                    .log().all()
-                    .statusCode(302)
-                    .extract()
-                    .cookie(authCookieKey);
-
-            open("/img/demo-magazin-logo-1590349645.jpg");
-            Cookie authCookie = new Cookie(authCookieKey, authCookieValue);
-            getWebDriver().manage().addCookie(authCookie);
-        });
-
-
-    }
-
-
+public class ShopEmagazinApiTests extends TestBase {
 
     @Test
-    @Tags({ @Tag("API"), @Tag("Regress")})
+    @Tags({@Tag("API"), @Tag("Regress")})
     @DisplayName("Check user authorization")
     void authorizationUserTest() {
         step("open minimal content", () ->
                 mainPage.openMinContent());
-
         step("API authorization", () -> {
             RequestModels formParam = new RequestModels();
             formParam.setBack(testData.back);
             formParam.setEmail(testData.email);
             formParam.setPassword(testData.password);
             formParam.setSubmitLogin(testData.submitLogin);
-
             testData.authCookieValue = given()
                     .spec(requestSpec)
-                    .formParam("back", formParam.getBack())
                     .formParam("email", formParam.getEmail())
                     .formParam("password", formParam.getPassword())
+                    .formParam("back", formParam.getBack())
                     .formParam("submitLogin", formParam.getSubmitLogin())
                     .when()
                     .post("/index.php?controller=authentication&back=my-account")
                     .then()
                     .spec(responseSpec302)
                     .extract()
-                    .cookie(testData.authCookieName);
+                    .cookie(testData.authCookieKey);
         });
 
         step("Browser set cookie", () -> {
-            open(baseUrl);
-            Selenide.clearBrowserCookies();
-            Cookie authCookie = new Cookie(testData.authCookieName, testData.authCookieValue);
+            mainPage.openMinContent();
+            Cookie authCookie = new Cookie(testData.authCookieKey, testData.authCookieValue);
             WebDriverRunner.getWebDriver().manage().addCookie(authCookie);
         });
 
@@ -90,8 +55,8 @@ public class ShopEmagazinApiTests extends TestBase{
     }
 
     @Test
-    @Tags({ @Tag("API"), @Tag("Regress")})
-    @DisplayName("Check successful user authorization")
+    @Tags({@Tag("API"), @Tag("Regress")})
+    @DisplayName("Check successful user registration")
     void successRegistrationUserTest() {
         step("open minimal content", () ->
                 mainPage.openMinContent());
@@ -121,12 +86,13 @@ public class ShopEmagazinApiTests extends TestBase{
                     .post("/index.php?controller=authentication&create_account=1")
                     .then()
                     .spec(responseSpec302);
+
         });
     }
 
     @Test
-    @Tags({ @Tag("API"), @Tag("Regress")})
-    @DisplayName("Check unsuccessful user authorization")
+    @Tags({@Tag("API"), @Tag("Regress")})
+    @DisplayName("Check unsuccessful user registration")
     void failRegistrationUserTest() {
         step("open minimal content", () ->
                 mainPage.openMinContent());
@@ -135,17 +101,24 @@ public class ShopEmagazinApiTests extends TestBase{
             RequestModels formParam = new RequestModels();
             formParam.setFirstName(testData.firstName);
             formParam.setLastName(testData.lastName);
+            formParam.setEmail(testData.email);
             formParam.setPassword(testData.passwordCreate);
+            formParam.setPsgdpr(testData.psgdpr);
+            formParam.setSubmitCreate(testData.submitCreate);
             given()
                     .spec(requestSpec)
                     .formParam("firstname", formParam.getFirstName())
                     .formParam("lastname", formParam.getLastName())
+                    .formParam("email", formParam.getEmail())
                     .formParam("password", formParam.getPassword())
+                    .formParam("psgdpr", formParam.getPsgdpr())
+                    .formParam("submitCreate", formParam.getSubmitCreate())
                     .when()
                     .post("/index.php?controller=authentication&create_account=1")
                     .then()
                     .spec(responseSpecFail200);
         });
+
     }
 }
 

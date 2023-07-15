@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBaseLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/helpers/DriverUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/web_api/pages/AuthorizationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/pages/AuthorizationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/specs/Specifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/specs/Specifications.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBaseLocal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBaseLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/TestData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/d.ochkasov/Desktop/demowebshop_Tests_UI_API-master",
+    "last_opened_file_path": "C:/Users/d.ochkasov/ideaProjects/Diplom_QA_Guru/src/test",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.53908044",
@@ -81,10 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\src\test" />
+      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\src\test\java\web_api\tests" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru_Ochkasov_D\src\test\java\web_api\config" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru_Ochkasov_D" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru_Ochkasov_D\src\test\resources\config" />
-      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru_Ochkasov_D\src\test\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="web_api.tests" />
@@ -92,49 +96,29 @@
       <recent name="config.user" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ShopEmagazinApiTests.loginWithApiTest">
-    <configuration name="Diplom_QA_Guru_Ochkasov_D [api_test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ShopEmagazinWebTests.checkMenuElementsTest">
+    <configuration name="ShopEmagazinApiTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="api_test" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;web_api.tests.ShopEmagazinApiTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="Diplom_QA_Guru_Ochkasov_D [web_test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="web_test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="ShopEmagazinApiTests.authorizationUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -151,30 +135,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;web_api.tests.ShopEmagazinApiTests.authorizationUserTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="ShopEmagazinApiTests.loginWithApiTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;web_api.tests.ShopEmagazinApiTests.loginWithApiTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -209,12 +169,60 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="ShopEmagazinWebTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;web_api.tests.ShopEmagazinWebTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="ShopEmagazinWebTests.checkMenuElementsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;web_api.tests.ShopEmagazinWebTests.checkMenuElementsTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ShopEmagazinApiTests.loginWithApiTest" />
+        <item itemvalue="Gradle.ShopEmagazinWebTests.checkMenuElementsTest" />
+        <item itemvalue="Gradle.ShopEmagazinWebTests" />
+        <item itemvalue="Gradle.ShopEmagazinApiTests" />
         <item itemvalue="Gradle.ShopEmagazinApiTests.authorizationUserTest" />
-        <item itemvalue="Gradle.Diplom_QA_Guru_Ochkasov_D [api_test]" />
-        <item itemvalue="Gradle.Diplom_QA_Guru_Ochkasov_D [web_test]" />
         <item itemvalue="Gradle.ShopEmagazinApiTests.successRegistrationUserTest" />
       </list>
     </recent_temporary>

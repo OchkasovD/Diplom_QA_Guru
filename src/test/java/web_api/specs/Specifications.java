@@ -12,10 +12,9 @@ import static web_api.helpers.CustomApiListener.withCustomTemplates;
 public class Specifications {
 
     public static RequestSpecification requestSpec = with()
-            .filter(withCustomTemplates())
             .log().uri()
             .log().all()
-            .contentType("application/x-www-form-urlencoded; charset=utf-8");
+            .contentType("application/x-www-form-urlencoded; charset=UTF-8");
 
     public static ResponseSpecification responseSpecFail200 = new ResponseSpecBuilder()
             .expectStatusCode(200)

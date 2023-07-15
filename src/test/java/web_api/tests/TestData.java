@@ -10,11 +10,12 @@ public class TestData {
     String menuRelatedProd = "Сопутствующие товары";
     String menuPaintings = "Картины";
     String nameTitleCard = "Mountain fox notebook";
-    String email = "locat@testmail.ru";
-    String password = "99990000";
+    String email = "loca@testmail.ru";
+    String password = "qatest";
     String back = "my-account";
     String submitLogin = "1";
-    String authCookieName = "PrestaShop-5eb24e794c8e2bb6adc3500d9af027ad";
+    String firstname = "Dmytry";
+    String authCookieKey= "PrestaShop-5eb24e794c8e2bb6adc3500d9af027ad";
     String authCookieValue;
 
     Integer countElements = 11;
