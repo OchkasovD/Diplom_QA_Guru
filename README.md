@@ -245,7 +245,7 @@ dependencies {
 
 
 ## <img width="4%" style="vertical-align:middle" title="Jira" src="readme_files/technologies/Jira.svg"> Интеграция с Jira
-> Реализована интеграция c Jira
+> *Реализована интеграция c Jira*
 
 ![This is an image](readme_files/allure/Jira.png)
 
