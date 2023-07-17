@@ -19,9 +19,9 @@ public class ShopEmagazinApiTests extends TestBase {
 
     @Test
     @Tag("API")
-    @DisplayName("Check user authorization")
+    @DisplayName("Test user authorization")
     void authorizationUserTest() {
-        step("open minimal content", () ->
+        step("Открытие минимального контента", () ->
                 mainPage.openMinContent());
         step("API authorization", () -> {
             RequestModels formParam = new RequestModels();
@@ -49,7 +49,7 @@ public class ShopEmagazinApiTests extends TestBase {
             WebDriverRunner.getWebDriver().manage().addCookie(authCookie);
         });
 
-        step("Check UI authorization", () -> {
+        step("Проверка авторизации через UI", () -> {
             authorizationPage.checkAuthorizationUser();
         });
     }
@@ -58,7 +58,7 @@ public class ShopEmagazinApiTests extends TestBase {
     @Tag("API")
     @DisplayName("Check successful user registration")
     void successRegistrationUserTest() {
-        step("open minimal content", () ->
+        step("Открытие минимального контента", () ->
                 mainPage.openMinContent());
 
         step("API registration", () -> {
@@ -94,7 +94,7 @@ public class ShopEmagazinApiTests extends TestBase {
     @Tag("API")
     @DisplayName("Check unsuccessful user registration")
     void failRegistrationUserTest() {
-        step("open minimal content", () ->
+        step("Открытие минимального контента", () ->
                 mainPage.openMinContent());
 
         step("API registration", () -> {

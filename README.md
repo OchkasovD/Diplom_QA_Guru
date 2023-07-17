@@ -1,5 +1,5 @@
 <a href="https://github.com/"><img alt="github.com" height="50" src="readme_files/technologies/github.svg"/></a>
-# Демо проект по автоматизации тестирования на Java. Сайт shop1.emagazin.info.
+# Демо проект по автоматизации тестирования на Java. Сайт https://shop1.emagazin.info/.
 
 
 ## Содержание :bookmark_tabs:
@@ -42,15 +42,15 @@
 
 * UI:
 
-:white_check_mark: проверка title страницы 
+:white_check_mark: Test main page title 'shop1.emagazin.info - Проверка титульной части страницы 
 
-:white_check_mark: проверка перехода по элементам  в навигационной панели 
+:white_check_mark: Test navigation panel elements navigation - Проверка перехода по элементам  в навигационной панели 
 
-:white_check_mark: проверка количества товаров 
+:white_check_mark: Test number of goods - Проверка количества товаров 
 
-:white_check_mark: проверка открытия карточка товара 
+:white_check_mark: Test open card product - Проверка открытия карточка товара 
 
-:white_check_mark: проверка добавление товара в корзину 
+:white_check_mark: Test add item to cart - Проверка добавление товара в корзину 
 
 * API + UI:
 
@@ -100,27 +100,27 @@ gradle clean
 ```java
 
 
-public class SauceDemoTests extends TestBase {
+public class ShopEmagazinWebTests extends TestBase {
+    
+  @Test
+  @Tag("WEB")
+  @DisplayName("Check navigation panel elements transition")
+  void checkMenuElementsTest() {
+    step("Open the main page", ()
+            -> open(baseUrl));
 
-    @Test
-    @DisplayName("Проверка добавление товара в корзину UI")
-    void checkAddBasketTest() {
-        step("Открываем главную страницу сайта", ()
-                -> open(baseUrl));
+    step("Check, transition element 'Одежда'", () -> {
+      mainPage.navigationMenu(testData.menuClothes);
+    });
 
-        step("Переход по элементу 'Сопутствующие товары'", () -> {
-            sauceDemoPage.navigationMenu(testData.menuRelatedProd);
-        });
+    step("Check, transition element 'Сопутствующие товары'", () -> {
+      mainPage.navigationMenu(testData.menuRelatedProd);
+    });
 
-        step("Открытия карточки товара 'Сопутствующие товары'", () -> {
-            sauceDemoPage.openDetailCard(testData.nameTitleCard);
-        });
-
-        step("Добавление товара в корзину", () -> {
-            sauceDemoPage.addToCardProduct();
-        });
-    }
-}    
+    step("Check, transition element 'Картины'", () -> {
+      mainPage.navigationMenu(testData.menuPaintings);
+    });
+  }
 ```
 
 
@@ -132,37 +132,38 @@ public class SauceDemoTests extends TestBase {
 
 ```groovy
 plugins {
-    id 'java-library'
-    id 'io.qameta.allure' version '2.10.0'
-    id 'io.freefair.lombok' version '6.0.0-m2'
+  id 'java-library'
+  id 'io.qameta.allure' version '2.10.0'
+  id 'io.freefair.lombok' version '6.0.0-m2'
 }
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
-def allureVersion = "2.18.1",
-    selenideVersion = "6.5.0",
+def allureVersion = "2.23.0",
+    selenideVersion = "6.15.0",
     junitVersion = "5.8.2",
     aspectjweaverVersion = "1.9.6",
     javafakerVersion = "1.0.2",
-    restAssuredVersion = "4.3.1",
+    restAssuredVersion = "5.3.0",
     ownerVersion = "1.0.12",
     assertjCoreVersion = "3.19.0",
-    slf4jSimpleVersion = "1.7.29"
-    
+    slf4jSimpleVersion = "2.0.7"
+
+
 dependencies {
-    testImplementation(
-            "org.aspectj:aspectjweaver:$aspectjweaverVersion",
-            "com.github.javafaker:javafaker:$javafakerVersion",
-            "com.codeborne:selenide:$selenideVersion",
-            "io.qameta.allure:allure-selenide:$allureVersion",
-            "io.rest-assured:rest-assured:$restAssuredVersion",
-            "io.qameta.allure:allure-rest-assured:$allureVersion",
-            "org.aeonbits.owner:owner:$ownerVersion",
-            "org.assertj:assertj-core:$assertjCoreVersion",
-            "org.slf4j:slf4j-simple:$slf4jSimpleVersion",
-            "org.junit.jupiter:junit-jupiter:$junitVersion")
+  testImplementation(
+          "org.aspectj:aspectjweaver:$aspectjweaverVersion",
+          "com.github.javafaker:javafaker:$javafakerVersion",
+          "com.codeborne:selenide:$selenideVersion",
+          "io.qameta.allure:allure-selenide:$allureVersion",
+          "io.rest-assured:rest-assured:$restAssuredVersion",
+          "io.qameta.allure:allure-rest-assured:$allureVersion",
+          "org.aeonbits.owner:owner:$ownerVersion",
+          "org.assertj:assertj-core:$assertjCoreVersion",
+          "org.slf4j:slf4j-simple:$slf4jSimpleVersion",
+          "org.junit.jupiter:junit-jupiter:$junitVersion")
 }
 ```
 
@@ -191,36 +192,36 @@ dependencies {
 <table>
      <tr>
         <td>
-        <a href="https://allure.autotests.cloud/project/1635/dashboards">
+        <a href="https://allure.autotests.cloud/project/3507/dashboards">
         <img src="readme_files/allure/AllureTestOpsDashboard.png">
         </a>
         </td>
         <td>
-        <a href="https://allure.autotests.cloud/project/1635/test-cases?treeId=0">
+        <a href="https://allure.autotests.cloud/project/3507/test-cases?treeId=0">
         <img src="readme_files/allure/AllureTestOpsTestCases.png">
         </a>
         </td>
     </tr>
     <tr>
         <td>
-        <a href="https://jenkins.autotests.cloud/job/qa_guru_diplom_UI_API/13/allure/">
+        <a href="https://jenkins.autotests.cloud/job/diplom_QA_Guru_Dmitry_O/allure/">
         <img src="readme_files/allure/AllureDashboard.png">
         </a>
         </td>
         <td>
-        <a href="https://jenkins.autotests.cloud/job/qa_guru_diplom_UI_API/13/allure/#suites/e38dc78043549dd424b12c97d4a1cdb4/ac747a5ba4bbaae5/">
+        <a href="https://jenkins.autotests.cloud/job/diplom_QA_Guru_Dmitry_O/allure/#suites/9bdaea1cbe85c116422c3c6ff0c42451/256f4b3fcb272b20/">
         <img src="readme_files/allure/AllureTestCases.png">
         </a>
         </td>
     </tr>
     <tr>
         <td>
-        <a href="https://jenkins.autotests.cloud/job/qa_guru_diplom_UI_API/13/allure/#timeline">
+        <a href="https://jenkins.autotests.cloud/job/diplom_QA_Guru_Dmitry_O/allure/#timeline">
         <img src="readme_files/allure/AllureTimeLine.png">
         </a>
         </td>
         <td>
-        <a href="https://jenkins.autotests.cloud/job/qa_guru_diplom_UI_API/13/allure/#graph">
+        <a href="https://jenkins.autotests.cloud/job/diplom_QA_Guru_Dmitry_O/allure/#graph">
         <img src="readme_files/allure/AllureStatus.png">
         </a>
         </td>
