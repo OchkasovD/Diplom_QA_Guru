@@ -245,7 +245,7 @@ dependencies {
 
 
 
-<a id="Jira"></a>
+<a id="technologies"></a>
 #### <img alt="Jira" height="50" src="readme_files/technologies/jira.svg" width="50"/>Jira</a>
 
 > *Реализована интеграция c Jira*
