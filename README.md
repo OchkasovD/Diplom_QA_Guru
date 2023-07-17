@@ -179,7 +179,7 @@ dependencies {
 результатам сборки*
 
 <a href="https://jenkins.autotests.cloud/job/qa_guru_diplom_UI_API/">
-<img src="readme_files/jenkins/JenkinsProject.png" alt="Jenkins">
+<img src="/jenkins/JenkinsProject.png" alt="Jenkins">
 </a>
 
 
@@ -241,3 +241,12 @@ dependencies {
         </td>
     </tr>
  </table>   
+
+<a id="notifications"></a>
+## <img width="4%" style="vertical-align:middle" title="Selenoid" src="readme_files/technologies/Selenoid.svg"> Видео с запуском тестов
+
+### Для всех тестов записано видео
+
+####  К примеру, web-тест "Авторизация по почте и паролю"
+
+![This is an gif](readme_files/video/testvideo.gif)

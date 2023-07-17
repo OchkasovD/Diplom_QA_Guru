@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/readme_files/video/testvideo.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_files/allure/AllureDashboard.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/readme_files/allure/AllureDashboard.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_files/allure/AllureStatus.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/readme_files/allure/AllureStatus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_files/allure/AllureTestCases.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/readme_files/allure/AllureTestCases.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_files/allure/AllureTestOpsDashboard.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/readme_files/allure/AllureTestOpsDashboard.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_files/allure/AllureTestOpsTestCases.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/readme_files/allure/AllureTestOpsTestCases.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_files/allure/AllureTimeLine.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/readme_files/allure/AllureTimeLine.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_files/jenkins/JenkinsProject.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/readme_files/jenkins/JenkinsProject.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_files/telegram/Notifications.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/readme_files/telegram/Notifications.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +89,11 @@
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru_Ochkasov_D\src\test\java\web_api\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\telegram" />
-      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\allure" />
-      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\jenkins" />
-      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\notifications" />
+      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\video" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru" />
+      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\allure" />
+      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\telegram" />
+      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\jenkins" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="web_api.tests" />
@@ -424,7 +416,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689595755945</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot">
+      <created>1689596112774</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1689596112774</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot">
+      <created>1689596441279</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1689596441279</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
