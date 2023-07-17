@@ -209,7 +209,7 @@ dependencies {
         </a>
         </td>
         <td>
-        <a href="https://jenkins.autotests.cloud/job/diplom_QA_Guru_Dmitry_O/allure/#suites/9bdaea1cbe85c116422c3c6ff0c42451/256f4b3fcb272b20/">
+        <a href="https://jenkins.autotests.cloud/job/diplom_QA_Guru_Dmitry_O/allure/#suites/">
         <img src="readme_files/allure/AllureTestCases.png">
         </a>
         </td>
