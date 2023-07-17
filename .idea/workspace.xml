@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/readme_files/video/testvideo.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -430,7 +428,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689596441279</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif">
+      <created>1689598262191</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1689598262191</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif">
+      <created>1689598395652</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1689598395652</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -439,7 +451,8 @@
     <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme" />
     <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags" />
     <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot" />
-    <option name="LAST_COMMIT_MESSAGE" value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot" />
+    <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif" />
+    <option name="LAST_COMMIT_MESSAGE" value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

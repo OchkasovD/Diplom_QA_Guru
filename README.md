@@ -245,7 +245,6 @@ dependencies {
 
 #### <img alt="Telegram" height="50" src="readme_files/technologies/selenoid.svg" width="50"/></a> Видео с запуском тестов
 
-### Для всех тестов записано видео
-
+> *Для всех тестов записано видео*
 
 ![This is an gif](readme_files/video/testvideo.gif)
