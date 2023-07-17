@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme_files/jenkins/JenkinsProject.png" beforeDir="false" afterPath="$PROJECT_DIR$/readme_files/jenkins/JenkinsProject.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +89,11 @@
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru_Ochkasov_D\src\test\java\web_api\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\jenkins" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\video" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\allure" />
       <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\telegram" />
-      <recent name="C:\Users\d.ochkasov\ideaProjects\Diplom_QA_Guru\readme_files\jenkins" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="web_api.tests" />
@@ -442,7 +444,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689598395652</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif">
+      <created>1689598575497</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1689598575497</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif">
+      <created>1689598618157</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1689598618157</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif">
+      <created>1689599790406</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1689599790406</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -179,7 +179,7 @@ dependencies {
 результатам сборки*
 
 <a href="https://jenkins.autotests.cloud/job/diplom_QA_Guru_Dmitry_O/">
-<img src="/jenkins/JenkinsProject.png" alt="Jenkins">
+<img src="readme_files/jenkins/JenkinsProject.png" alt="Jenkins">
 </a>
 
 
