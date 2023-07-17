@@ -13,7 +13,8 @@
   + <a href="#jenkins">Jenkins</a>
   + <a href="#allure">Allure TestOps, Allure Report</a>
   + <a href="#notifications">Telegram</a>
-
+  + <a href="#jira">Jira</a>
+  + <a href="#video">Видеозапись тестов</a>
 
 
 <a id="stack"></a>
@@ -122,7 +123,7 @@ public class ShopEmagazinWebTests extends TestBase {
             mainPage.navigationMenu(testData.menuPaintings);
         });
     }
-}
+
 ```
 
 
@@ -246,15 +247,17 @@ dependencies {
 
 
 
-<a id="technologies"></a>
-#### <img alt="Jira" height="50" src="readme_files/technologies/jira.svg" width="50"/>Jira</a>
+<a id="jira"></a>
+#### <img alt="jira" height="50" src="readme_files/technologies/jira.svg" width="50"/>Jira</a>
 
 > *Реализована интеграция c Jira*
 
 <a href="https://jira.autotests.cloud/browse/HOMEWORK-789">
-<img src="readme_files/allure/Jira.png" alt="Jenkins">
+<img src="readme_files/allure/Jira.png" alt="Jira">
 </a>
 
+
+<a id="video"></a>
 #### <img alt="Selenoid" height="50" src="readme_files/technologies/selenoid.svg" width="50"/></a> Видео с запуском тестов
 
 > *Для всех тестов записано видео*
