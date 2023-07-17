@@ -243,7 +243,7 @@ dependencies {
  </table>   
 
 
-## <img width="15%" style="vertical-align:middle" title="Selenoid" src="readme_files/technologies/Selenoid.svg"> Видео с запуском тестов
+#### <img alt="Telegram" height="50" src="readme_files/technologies/selenoid.svg" width="50"/></a> Видео с запуском тестов
 
 ### Для всех тестов записано видео
 
