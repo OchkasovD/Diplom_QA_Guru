@@ -246,6 +246,7 @@ dependencies {
 
 ## <img width="4%" style="vertical-align:middle" title="Jira" src="readme_files/technologies/Jira.svg"> Интеграция с Jira
 > *Реализована интеграция c Jira*
+###  <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-789">
 
 ![This is an image](readme_files/allure/Jira.png)
 
