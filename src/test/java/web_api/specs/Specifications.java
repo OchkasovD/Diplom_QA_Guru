@@ -14,6 +14,7 @@ public class Specifications {
     public static RequestSpecification requestSpec = with()
             .log().uri()
             .log().all()
+            .filter(withCustomTemplates())
             .contentType("application/x-www-form-urlencoded; charset=UTF-8");
 
     public static ResponseSpecification responseSpecFail200 = new ResponseSpecBuilder()
