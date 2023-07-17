@@ -1,5 +1,5 @@
 <a href="https://github.com/"><img alt="github.com" height="50" src="readme_files/technologies/github.svg"/></a>
-# Демо проект по автоматизации тестирования на Java. Сайт https://shop1.emagazin.info/.
+# Демо проект по автоматизации тестирования на Java. Сайт https://shop1.emagazin.info/
 
 
 ## Содержание :bookmark_tabs:
@@ -178,7 +178,7 @@ dependencies {
 > *Решение комплекса задач по сборке проекта, прогону автотестов, получению отчетов и отправке уведомлений по
 результатам сборки*
 
-<a href="https://jenkins.autotests.cloud/job/qa_guru_diplom_UI_API/">
+<a href="https://jenkins.autotests.cloud/job/diplom_QA_Guru_Dmitry_O/">
 <img src="/jenkins/JenkinsProject.png" alt="Jenkins">
 </a>
 
