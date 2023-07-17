@@ -18,7 +18,7 @@ import static web_api.specs.Specifications.*;
 public class ShopEmagazinApiTests extends TestBase {
 
     @Test
-    @Tags({@Tag("API"), @Tag("Regress")})
+    @Tag("API")
     @DisplayName("Check user authorization")
     void authorizationUserTest() {
         step("open minimal content", () ->
@@ -55,7 +55,7 @@ public class ShopEmagazinApiTests extends TestBase {
     }
 
     @Test
-    @Tags({@Tag("API"), @Tag("Regress")})
+    @Tag("API")
     @DisplayName("Check successful user registration")
     void successRegistrationUserTest() {
         step("open minimal content", () ->
@@ -91,7 +91,7 @@ public class ShopEmagazinApiTests extends TestBase {
     }
 
     @Test
-    @Tags({@Tag("API"), @Tag("Regress")})
+    @Tag("API")
     @DisplayName("Check unsuccessful user registration")
     void failRegistrationUserTest() {
         step("open minimal content", () ->

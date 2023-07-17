@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ShopEmagazinWebTests extends TestBase {
 
     @Test
-    @Tags({@Tag("WEB"), @Tag("Regress")})
+    @Tag("WEB")
     @DisplayName("Check main page title 'shop1.emagazin.info'")
     void checkTitleTest() {
         step("Open the main page", ()
@@ -28,7 +28,7 @@ public class ShopEmagazinWebTests extends TestBase {
 
 
     @Test
-    @Tags({@Tag("WEB"), @Tag("Regress")})
+    @Tag("WEB")
     @DisplayName("Check navigation panel elements transition")
     void checkMenuElementsTest() {
         step("Open the main page", ()
@@ -48,7 +48,7 @@ public class ShopEmagazinWebTests extends TestBase {
     }
 
     @Test
-    @Tags({@Tag("WEB"), @Tag("Regress")})
+    @Tag("WEB")
     @DisplayName("Check number of goods")
     void checkRelatedProductsElementsTest() {
         step("Open the main page", ()
@@ -65,7 +65,7 @@ public class ShopEmagazinWebTests extends TestBase {
     }
 
     @Test
-    @Tags({@Tag("WEB"), @Tag("Regress")})
+    @Tag("WEB")
     @DisplayName("Check open card product")
     void checkCardProductTest() {
         step("Open the main page", ()
@@ -84,7 +84,7 @@ public class ShopEmagazinWebTests extends TestBase {
     }
 
     @Test
-    @Tags({@Tag("WEB"), @Tag("Regress")})
+    @Tag("WEB")
     @DisplayName("Check add item to cart")
     void checkAddBasketTest() {
         step("Open the main page", ()
