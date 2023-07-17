@@ -31,6 +31,7 @@
 <a href="https://qameta.io/"><img alt="Allure TestOps" height="50" src="readme_files/technologies/allure_testops.svg" width="50"/></a>
 <a href="https://github.com/allure-framework/"><img alt="Allure" height="50" src="readme_files/technologies/allure.svg" width="50"/></a>
 <a href="https://github.com/"><img alt="GitHub" height="50" src="readme_files/technologies/github.svg" width="50"/></a>
+<a href="https://github.com/"><img alt="GitHub" height="50" src="readme_files/technologies/jira.svg" width="50"/></a>
 </div>
 
 
@@ -242,6 +243,11 @@ dependencies {
     </tr>
  </table>   
 
+
+## <img width="4%" style="vertical-align:middle" title="Jira" src="readme_files/technologies/Jira.svg"> Интеграция с Jira
+> Реализована интеграция c Jira
+
+![This is an image](readme_files/allure/Jira.png)
 
 #### <img alt="Telegram" height="50" src="readme_files/technologies/selenoid.svg" width="50"/></a> Видео с запуском тестов
 
