@@ -244,11 +244,15 @@ dependencies {
  </table>   
 
 
-## <img width="4%" style="vertical-align:middle" title="Jira" src="readme_files/technologies/Jira.svg"> Интеграция с Jira
-> *Реализована интеграция c Jira*
-###  <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-789">
 
-![This is an image](readme_files/allure/Jira.png)
+<a id="Jira"></a>
+#### <img alt="Jira" height="50" src="readme_files/technologies/jira.svg" width="50"/>Jira</a>
+
+> *Реализована интеграция c Jira*
+
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-789">
+<img src="readme_files/allure/Jira.png" alt="Jenkins">
+</a>
 
 #### <img alt="Telegram" height="50" src="readme_files/technologies/selenoid.svg" width="50"/></a> Видео с запуском тестов
 
