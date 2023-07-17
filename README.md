@@ -19,7 +19,7 @@
 <a id="stack"></a>
 ## Cтек технологий :hammer_and_wrench:
 
-<div align="center">
+<div ="center">
 <a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="readme_files/technologies/intelij_idea.svg" width="50"/></a>
 <a href="https://www.java.com/"><img alt="Java" height="50" src="readme_files/technologies/java.svg" width="50"/></a>
 <a href="https://junit.org/junit5/"><img alt="JUnit 5" height="50" src="readme_files/technologies/junit5.svg" width="50"/></a>
@@ -102,26 +102,27 @@ gradle clean
 
 
 public class ShopEmagazinWebTests extends TestBase {
-    
-  @Test
-  @Tag("WEB")
-  @DisplayName("Check navigation panel elements transition")
-  void checkMenuElementsTest() {
-    step("Open the main page", ()
-            -> open(baseUrl));
 
-    step("Check, transition element 'Одежда'", () -> {
-      mainPage.navigationMenu(testData.menuClothes);
-    });
+    @Test
+    @Tag("WEB")
+    @DisplayName("Check navigation panel elements transition")
+    void checkMenuElementsTest() {
+        step("Open the main page", ()
+                -> open(baseUrl));
 
-    step("Check, transition element 'Сопутствующие товары'", () -> {
-      mainPage.navigationMenu(testData.menuRelatedProd);
-    });
+        step("Check, transition element 'Одежда'", () -> {
+            mainPage.navigationMenu(testData.menuClothes);
+        });
 
-    step("Check, transition element 'Картины'", () -> {
-      mainPage.navigationMenu(testData.menuPaintings);
-    });
-  }
+        step("Check, transition element 'Сопутствующие товары'", () -> {
+            mainPage.navigationMenu(testData.menuRelatedProd);
+        });
+
+        step("Check, transition element 'Картины'", () -> {
+            mainPage.navigationMenu(testData.menuPaintings);
+        });
+    }
+}
 ```
 
 
@@ -254,7 +255,7 @@ dependencies {
 <img src="readme_files/allure/Jira.png" alt="Jenkins">
 </a>
 
-#### <img alt="Telegram" height="50" src="readme_files/technologies/selenoid.svg" width="50"/></a> Видео с запуском тестов
+#### <img alt="Selenoid" height="50" src="readme_files/technologies/selenoid.svg" width="50"/></a> Видео с запуском тестов
 
 > *Для всех тестов записано видео*
 
