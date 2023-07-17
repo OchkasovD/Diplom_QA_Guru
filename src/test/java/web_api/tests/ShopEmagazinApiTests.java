@@ -56,7 +56,7 @@ public class ShopEmagazinApiTests extends TestBase {
 
     @Test
     @Tag("API")
-    @DisplayName("Check successful user registration")
+    @DisplayName("Test successful user registration")
     void successRegistrationUserTest() {
         step("Открытие минимального контента", () ->
                 mainPage.openMinContent());
@@ -92,7 +92,7 @@ public class ShopEmagazinApiTests extends TestBase {
 
     @Test
     @Tag("API")
-    @DisplayName("Check unsuccessful user registration")
+    @DisplayName("Test unsuccessful user registration")
     void failRegistrationUserTest() {
         step("Открытие минимального контента", () ->
                 mainPage.openMinContent());

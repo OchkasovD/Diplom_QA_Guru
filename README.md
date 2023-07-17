@@ -42,25 +42,25 @@
 
 * UI:
 
-:white_check_mark: Test main page title 'shop1.emagazin.info - Проверка титульной части страницы 
+:white_check_mark: Test main page title 'shop1.emagazin.info - Проверка титульной части страницы. 
 
-:white_check_mark: Test navigation panel elements navigation - Проверка перехода по элементам  в навигационной панели 
+:white_check_mark: Test navigation panel elements navigation - Проверка перехода по элементам  в навигационной панели. 
 
-:white_check_mark: Test number of goods - Проверка количества товаров 
+:white_check_mark: Test number of goods - Проверка количества товаров. 
 
-:white_check_mark: Test open card product - Проверка открытия карточка товара 
+:white_check_mark: Test open card product - Проверка открытия карточка товара. 
 
-:white_check_mark: Test add item to cart - Проверка добавление товара в корзину 
+:white_check_mark: Test add item to cart - Проверка добавление товара в корзину.
 
 * API + UI:
 
-:white_check_mark: проверка авторизации пользователя
+:white_check_mark: Test user authorization - проверка авторизации пользователя.
 
 * API:
 
-:white_check_mark: проверка удачной регистрации пользователя 
+:white_check_mark: Test successful user registration - Проверка удачной регистрации пользователя. 
 
-:white_check_mark: проверка не удачной регистрации пользователя 
+:white_check_mark: Test unsuccessful user registration - Проверка не удачной регистрации пользователя. 
 
 
 
