@@ -1,5 +1,6 @@
 <a href="https://github.com/"><img alt="github.com" height="50" src="readme_files/technologies/github.svg"/></a>
-#  Проект по автоматизации тестирования на Java. Сайт https://shop1.emagazin.info/
+#  Проект по автоматизации тестирования на Java. 
+# Сайт https://shop1.emagazin.info/
 
 
 ## Содержание :bookmark_tabs:
