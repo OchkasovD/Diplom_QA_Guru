@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class ShopEmagazinWebTests extends TestBase {
-
+    private  TestData testData = new TestData();
     @Test
     @Tag("WEB")
     @DisplayName("Test main page title 'shop1.emagazin.info'")

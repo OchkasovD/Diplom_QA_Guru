@@ -2,21 +2,18 @@ package web_api.tests;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
 import web_api.models.RequestModels;
-import web_api.pages.AuthorizationPage;
-import web_api.pages.MainPage;
-import web_api.pages.ProductPage;
-
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static web_api.specs.Specifications.*;
 
 
-public class ShopEmagazinApiTests extends TestBase {
 
+
+public class ShopEmagazinApiTests extends TestBase {
+    private  TestData testData = new TestData();
     @Test
     @Tag("API")
     @DisplayName("Test user authorization")

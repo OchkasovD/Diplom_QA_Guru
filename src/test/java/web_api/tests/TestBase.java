@@ -21,7 +21,6 @@ import static java.lang.String.format;
 
 public class TestBase {
 
-    static TestData testData = new TestData();
     MainPage mainPage = new MainPage();
     ProductPage productPage = new ProductPage();
     AuthorizationPage authorizationPage = new AuthorizationPage();
