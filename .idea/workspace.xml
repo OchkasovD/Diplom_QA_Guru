@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +35,7 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Diplom_QA_Guru_Ochkasov_D" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Diplom_QA_Guru_Ochkasov_D" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -71,7 +67,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/d.ochkasov/Desktop/qa_guru_diplom_UI_API-master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/d.ochkasov/ideaProjects/Diplom_QA_Guru&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.53908044&quot;,
@@ -512,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689604966749</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira&#10;delete notification config">
+      <created>1690556725668</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1690556725668</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -523,7 +526,8 @@
     <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot" />
     <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif" />
     <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira" />
-    <option name="LAST_COMMIT_MESSAGE" value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira" />
+    <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira&#10;delete notification config" />
+    <option name="LAST_COMMIT_MESSAGE" value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira&#10;delete notification config" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
