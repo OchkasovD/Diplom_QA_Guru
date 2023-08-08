@@ -4,16 +4,17 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
+import web_api.data.ApiModels;
+import web_api.data.TestData;
 import web_api.models.RequestModels;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static web_api.specs.Specifications.*;
 
 
-
-
 public class ShopEmagazinApiTests extends TestBase {
-    private  TestData testData = new TestData();
+
+    static TestData testData = new TestData();
     @Test
     @Tag("API")
     @DisplayName("Test user authorization")
@@ -21,11 +22,7 @@ public class ShopEmagazinApiTests extends TestBase {
         step("Открытие минимального контента", () ->
                 mainPage.openMinContent());
         step("API authorization", () -> {
-            RequestModels formParam = new RequestModels();
-            formParam.setBack(testData.back);
-            formParam.setEmail(testData.email);
-            formParam.setPassword(testData.password);
-            formParam.setSubmitLogin(testData.submitLogin);
+            RequestModels formParam = ApiModels.apiAutorizationRequestModels(testData);
             testData.authCookieValue = given()
                     .spec(requestSpec)
                     .formParam("email", formParam.getEmail())
@@ -46,10 +43,12 @@ public class ShopEmagazinApiTests extends TestBase {
             WebDriverRunner.getWebDriver().manage().addCookie(authCookie);
         });
 
-        step("Проверка авторизации через UI", () -> {
+        step("Check UI authorization", () -> {
             authorizationPage.checkAuthorizationUser();
         });
     }
+
+
 
     @Test
     @Tag("API")
@@ -57,18 +56,8 @@ public class ShopEmagazinApiTests extends TestBase {
     void successRegistrationUserTest() {
         step("Открытие минимального контента", () ->
                 mainPage.openMinContent());
-
         step("API registration", () -> {
-            RequestModels formParam = new RequestModels();
-            formParam.setIdGender(testData.genderId);
-            formParam.setFirstName(testData.firstName);
-            formParam.setLastName(testData.lastName);
-            formParam.setEmail(testData.createEmail);
-            formParam.setPassword(testData.passwordCreate);
-            formParam.setBirthDay(testData.birthDay);
-            formParam.setPsgdpr(testData.psgdpr);
-            formParam.setSubmitCreate(testData.submitCreate);
-
+            RequestModels formParam = ApiModels.apiSuccessfulRegistrationRequestModels(testData);
             given()
                     .spec(requestSpec)
                     .formParam("id_gender", formParam.getIdGender())
@@ -93,15 +82,8 @@ public class ShopEmagazinApiTests extends TestBase {
     void failRegistrationUserTest() {
         step("Открытие минимального контента", () ->
                 mainPage.openMinContent());
-
         step("API registration", () -> {
-            RequestModels formParam = new RequestModels();
-            formParam.setFirstName(testData.firstName);
-            formParam.setLastName(testData.lastName);
-            formParam.setEmail(testData.email);
-            formParam.setPassword(testData.passwordCreate);
-            formParam.setPsgdpr(testData.psgdpr);
-            formParam.setSubmitCreate(testData.submitCreate);
+            RequestModels formParam = ApiModels.apiUnsuccessfulRegistrationRequestModels(testData);
             given()
                     .spec(requestSpec)
                     .formParam("firstname", formParam.getFirstName())

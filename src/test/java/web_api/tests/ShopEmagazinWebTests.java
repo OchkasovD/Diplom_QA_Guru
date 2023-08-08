@@ -1,8 +1,9 @@
 package web_api.tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import web_api.data.TestData;
+
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.title;
@@ -11,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class ShopEmagazinWebTests extends TestBase {
-    private  TestData testData = new TestData();
+    private TestData testData = new TestData();
     @Test
     @Tag("WEB")
     @DisplayName("Test main page title 'shop1.emagazin.info'")

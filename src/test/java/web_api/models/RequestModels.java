@@ -1,8 +1,8 @@
 package web_api.models;
-
 import lombok.Data;
 
 @Data
+
 public class RequestModels {
     private String back;
     private String email;

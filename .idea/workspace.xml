@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="">
+    <list default="true" id="709b2078-d518-4d8c-9295-77ac35bc5e5b" name="Changes" comment="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira&#10;delete notification config&#10;&#10;refactoring Api tests, add models">
+      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/config/ConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/config/RemoteConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/web_api/data/ApiModels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config/app.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/config/CredentialsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/helpers/Attach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/helpers/Attach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/models/RequestModels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/models/RequestModels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinWebTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/ShopEmagazinWebTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/web_api/tests/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/web_api/data/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/example_credential.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +80,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/d.ochkasov/ideaProjects/Diplom_QA_Guru&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.53908044&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
@@ -96,30 +108,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.ShopEmagazinWebTests.checkMenuElementsTest">
-    <configuration name="ShopEmagazinApiTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;web_api.tests.ShopEmagazinApiTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <configuration name="ShopEmagazinApiTests.authorizationUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -134,6 +122,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;web_api.tests.ShopEmagazinApiTests.authorizationUserTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="ShopEmagazinApiTests.failRegistrationUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;web_api.tests.ShopEmagazinApiTests.failRegistrationUserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -168,30 +180,6 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="ShopEmagazinWebTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;web_api.tests.ShopEmagazinWebTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <configuration name="ShopEmagazinWebTests.checkMenuElementsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -216,13 +204,37 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="ShopEmagazinWebTests.checkTitleTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":web_test" />
+            <option value="--tests" />
+            <option value="&quot;web_api.tests.ShopEmagazinWebTests.checkTitleTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ShopEmagazinWebTests.checkMenuElementsTest" />
-        <item itemvalue="Gradle.ShopEmagazinWebTests" />
-        <item itemvalue="Gradle.ShopEmagazinApiTests" />
-        <item itemvalue="Gradle.ShopEmagazinApiTests.authorizationUserTest" />
+        <item itemvalue="Gradle.ShopEmagazinWebTests.checkTitleTest" />
+        <item itemvalue="Gradle.ShopEmagazinApiTests.failRegistrationUserTest" />
         <item itemvalue="Gradle.ShopEmagazinApiTests.successRegistrationUserTest" />
+        <item itemvalue="Gradle.ShopEmagazinApiTests.authorizationUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -515,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690556725668</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira&#10;delete notification config">
+      <created>1690557380447</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1690557380447</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -527,7 +546,8 @@
     <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif" />
     <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira" />
     <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira&#10;delete notification config" />
-    <option name="LAST_COMMIT_MESSAGE" value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira&#10;delete notification config" />
+    <MESSAGE value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira&#10;delete notification config&#10;&#10;refactoring Api tests, add models" />
+    <option name="LAST_COMMIT_MESSAGE" value="add telegram notifications&#10;fix api test&#10;add readme&#10;fix tags&#10;add screenshot&#10;add gif&#10;add Jira&#10;delete notification config&#10;&#10;refactoring Api tests, add models" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
