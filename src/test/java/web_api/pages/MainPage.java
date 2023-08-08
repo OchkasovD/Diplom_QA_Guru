@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
-    ElementsCollection topMenuElements = $$("#top-menu .dropdown-item"),
+    ElementsCollection topMenuElements = $$("#top-menu .dropdown-item");
 
 
     public MainPage openMinContent() {
