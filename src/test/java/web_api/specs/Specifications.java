@@ -17,7 +17,7 @@ public class Specifications {
             .filter(withCustomTemplates())
             .contentType("application/x-www-form-urlencoded; charset=UTF-8");
 
-    public static ResponseSpecification responseSpecFail200 = new ResponseSpecBuilder()
+    public static ResponseSpecification responseSpec200 = new ResponseSpecBuilder()
             .expectStatusCode(200)
             .build();
 

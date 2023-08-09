@@ -15,9 +15,18 @@ public class TestData {
     public String password = config.getPassword();
     public String back = "my-account";
     public String submitLogin = "1";
-   // String firstname = "Dmytry";
-    public String authCookieKey= "PrestaShop-5eb24e794c8e2bb6adc3500d9af027ad";
+    public String authCookieKey = "PrestaShop-5eb24e794c8e2bb6adc3500d9af027ad";
     public String authCookieValue;
+    public String id_product = "23";
+    public String controller = "cart";
+    public String token = "a6de737f97fedf0aa13757c5bfd32778";
+    public String id_customization = "0";
+    public String qty = "1";
+    public String add = "1";
+    public String action = "update";
+    public String userName = "Dmytry";
+    public String invalidEmail = config.getInvalidLogin();
+    public String invalidPassword = config.getInvalidPassword();
 
     public Integer countElements = 11;
     public int RELATEDELEMENTS = 11;

@@ -1,5 +1,4 @@
 package web_api.tests;
-
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -10,23 +9,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import web_api.config.ConfigProperties;
 import web_api.config.RemoteConfig;
 import web_api.helpers.Attach;
-import web_api.pages.AuthorizationPage;
-import web_api.pages.MainPage;
-import web_api.pages.ProductPage;
 import java.util.Map;
 
 
 
 public class TestBase {
-
     static RemoteConfig remoteConfig = ConfigFactory.create(RemoteConfig.class, System.getProperties());
-
-    MainPage mainPage = new MainPage();
-    ProductPage productPage = new ProductPage();
-    AuthorizationPage authorizationPage = new AuthorizationPage();
     static boolean isRemote = Boolean.getBoolean("isRemote");
 
     @BeforeAll
@@ -47,7 +37,6 @@ public class TestBase {
             ));
             Configuration.browserCapabilities = capabilities;
         }
-
     }
     @BeforeEach
     void addListener() {
