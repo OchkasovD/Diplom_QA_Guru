@@ -2,13 +2,12 @@ package web_api.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
-    ElementsCollection topMenuElements = $$("#top-menu .dropdown-item");
+    private ElementsCollection topMenuElements = $$("#top-menu .dropdown-item");
 
     public MainPage openUserLoginPage() {
         $("[href=\"https://shop1.emagazin.info/index.php?controller=my-account\"]").click();
@@ -24,7 +23,5 @@ public class MainPage {
         topMenuElements.find(text(value)).click();
         return this;
     }
-
-
 }
 

@@ -14,10 +14,9 @@ import static io.restassured.RestAssured.given;
 import static web_api.specs.Specifications.*;
 
 
-public class ShopEmagazinUserRegistrationApiTests extends TestBase {
+public class UserRegistrationApiTests extends TestBase {
     static TestData testData = new TestData();
     MainPage mainPage = new MainPage();
-
 
     @Test
     @Tag("API")
@@ -68,7 +67,5 @@ public class ShopEmagazinUserRegistrationApiTests extends TestBase {
                     .spec(responseSpec200);
         });
     }
-
-
 }
 

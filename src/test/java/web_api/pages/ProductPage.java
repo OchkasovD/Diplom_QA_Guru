@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class ProductPage {
-    ElementsCollection catalogElements = $$("#products .product-miniature");
+    private ElementsCollection catalogElements = $$("#products .product-miniature");
 
     public ProductPage catalogSize(Integer value) {
         catalogElements.shouldHave(size(value));

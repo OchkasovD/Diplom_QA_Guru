@@ -1,4 +1,5 @@
 package web_api.tests;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -11,8 +12,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import web_api.config.RemoteConfig;
 import web_api.helpers.Attach;
-import java.util.Map;
 
+import java.util.Map;
 
 
 public class TestBase {
@@ -38,6 +39,7 @@ public class TestBase {
             Configuration.browserCapabilities = capabilities;
         }
     }
+
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
@@ -45,7 +47,7 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        if (isRemote){
+        if (isRemote) {
             Attach.addVideo();
         }
         Attach.screenshotAs("Last screenshot");

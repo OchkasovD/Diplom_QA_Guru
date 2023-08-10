@@ -11,17 +11,17 @@ import web_api.data.TestData;
 import web_api.models.RequestModels;
 import web_api.pages.AuthorizationPage;
 import web_api.pages.MainPage;
+
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static web_api.specs.Specifications.*;
 
 
-public class ShopEmagazinUserAutorizationApiTests extends TestBase {
+public class UserAutorizationApiTests extends TestBase {
 
     static TestData testData = new TestData();
     AuthorizationPage authorizationPage = new AuthorizationPage();
     MainPage mainPage = new MainPage();
-
 
     @Test
     @Tag("API")
@@ -53,7 +53,7 @@ public class ShopEmagazinUserAutorizationApiTests extends TestBase {
         });
 
         step("Check UI authorization", () ->
-            authorizationPage.checkAuthorizationUser());
+                authorizationPage.checkAuthorizationUser());
     }
 
     @Test
@@ -86,9 +86,8 @@ public class ShopEmagazinUserAutorizationApiTests extends TestBase {
         });
 
         step("Check UI UnsuccessfulAuthorization", () ->
-            authorizationPage.checkUnsuccessfulAuthorizationUser());
+                authorizationPage.checkUnsuccessfulAuthorizationUser());
     }
-
 }
 
 

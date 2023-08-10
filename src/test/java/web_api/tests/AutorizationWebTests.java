@@ -4,18 +4,17 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import web_api.pages.*;
+import web_api.pages.AuthorizationPage;
+import web_api.pages.MainPage;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 
-public class ShopEmagazinAutorizationWebTests extends TestBase {
-
+public class AutorizationWebTests extends TestBase {
 
     MainPage mainPage = new MainPage();
-
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
     @Test
@@ -34,7 +33,6 @@ public class ShopEmagazinAutorizationWebTests extends TestBase {
 
         step("Проверям успешную авторизацию", () ->
                 authorizationPage.checkAuthorizationUser());
-
     }
 
     @Test
@@ -53,9 +51,6 @@ public class ShopEmagazinAutorizationWebTests extends TestBase {
 
         step("Проверям сообщение об ошибке авторизации", () ->
                 authorizationPage.checkUnsuccessfulAuthorizationUser());
-
-
     }
-
 }
 

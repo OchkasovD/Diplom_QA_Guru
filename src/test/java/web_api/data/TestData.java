@@ -1,8 +1,10 @@
 package web_api.data;
+
 import com.github.javafaker.Faker;
 import org.aeonbits.owner.ConfigFactory;
-import java.text.SimpleDateFormat;
 import web_api.config.ConfigProperties;
+import java.text.SimpleDateFormat;
+
 public class TestData {
 
     ConfigProperties config = ConfigFactory.create(ConfigProperties.class, System.getProperties());

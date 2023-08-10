@@ -1,4 +1,5 @@
 package web_api.tests;
+
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
@@ -10,18 +11,17 @@ import web_api.data.TestData;
 import web_api.models.RequestModels;
 import web_api.pages.CartPage;
 import web_api.pages.MainPage;
+
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static web_api.specs.Specifications.*;
 
 
-public class ShopEmagazinAddToCartApiTests extends TestBase {
+public class AddToCartApiTests extends TestBase {
 
     static TestData testData = new TestData();
-
     CartPage cartPage = new CartPage();
     MainPage mainPage = new MainPage();
-
 
     @Test
     @Tag("API")
@@ -36,8 +36,8 @@ public class ShopEmagazinAddToCartApiTests extends TestBase {
                     .spec(requestSpec)
                     .queryParam("controller", formParam.getController())
                     .formParam("token", formParam.getToken())
-                    .formParam("id_product", formParam.getId_product())
-                    .formParam("id_customization", formParam.getId_customization())
+                    .formParam("id_product", formParam.getIdProduct())
+                    .formParam("id_customization", formParam.getIdCustomization())
                     .formParam("qty", formParam.getQty())
                     .formParam("add", formParam.getAdd())
                     .formParam("action", formParam.getAction())
@@ -50,7 +50,7 @@ public class ShopEmagazinAddToCartApiTests extends TestBase {
         });
 
         step("Check UI add to cart", () ->
-            cartPage.checkAddToCart());
+                cartPage.checkAddToCart());
     }
 
     @Test
@@ -87,8 +87,8 @@ public class ShopEmagazinAddToCartApiTests extends TestBase {
                     .spec(requestSpec)
                     .queryParam("controller", formParam.getController())
                     .formParam("token", formParam.getToken())
-                    .formParam("id_product", formParam.getId_product())
-                    .formParam("id_customization", formParam.getId_customization())
+                    .formParam("id_product", formParam.getIdProduct())
+                    .formParam("id_customization", formParam.getIdCustomization())
                     .formParam("qty", formParam.getQty())
                     .formParam("add", formParam.getAdd())
                     .formParam("action", formParam.getAction())
@@ -101,8 +101,7 @@ public class ShopEmagazinAddToCartApiTests extends TestBase {
         });
 
         step("Check UI add to cart with authorization", () ->
-            cartPage.checkAddToCartAuthUser());
-
+                cartPage.checkAddToCartAuthUser());
     }
 }
 

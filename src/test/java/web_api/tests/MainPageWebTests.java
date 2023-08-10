@@ -16,13 +16,11 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class ShopEmagazinMainPageWebTests extends TestBase {
+public class MainPageWebTests extends TestBase {
     static TestData testData = new TestData();
     CartPage cartPage = new CartPage();
-
     MainPage mainPage = new MainPage();
     ProductPage productPage = new ProductPage();
-
 
     @Test
     @Tag("WEB")
@@ -38,7 +36,6 @@ public class ShopEmagazinMainPageWebTests extends TestBase {
             assertThat(actualTitle).isEqualTo(expectedTitle);
         });
     }
-
 
     @Test
     @Tag("WEB")
@@ -113,9 +110,6 @@ public class ShopEmagazinMainPageWebTests extends TestBase {
 
         step("Проверка наличия товара в корзине'", () ->
                 cartPage.checkAddToCartWeb());
-
-
     }
-
 }
 
